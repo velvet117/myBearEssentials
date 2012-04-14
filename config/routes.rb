@@ -1,4 +1,10 @@
 MyBearEssentials::Application.routes.draw do
+  get "dashboard/index", :as => 'dashboard_index'
+
+  get "dashboard/plan", :as => 'dashboard_plan'
+
+  get "dashboard/check", :as => 'dashboard_check'
+
   resources :required_courses
 
   resources :specific_requirements

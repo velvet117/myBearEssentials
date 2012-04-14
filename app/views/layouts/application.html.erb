@@ -7,8 +7,42 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="everything">
+        <div id="header">
+            <div id="header_image"></div>
+        </div>
+    
+        <div id="header_tabs"></div>    
+        <div id="shadowdown"></div>
+	
+        <div id="content"><br />        
+            <div id="contenttabs">
+                <div id="tabs">
+                    <ul>
+                        <li><%= link_to "Profile", dashboard_index_path %></li>
+                        <li><%= link_to "Browse Classes and Plan", dashboard_plan_path %></li>
+                        <li><%= link_to "Check Fullfillment", dashboard_check_path %> </li>        
+                    </ul>
+                </div>
+        
+                <div id="contentcenter">
+                <%= yield %>
+                <!--Main Dashboard Content -->    
+                </div>				
+            </div>
+        </div>
+    
+        <div id="footer">
+            <div id="footer-inside">
+                <a href="/terms/">UCB CareerCenter</a> |
+                <a href="/privacy/">EECS/CS Website</a> |
+                <a href="/thanks/">DARS</a> |
+                <a href="/thanks/">NinjaCourses</a> |
+                <a href="/features/">CourseRank</a>
+                <br /> <br />
+                <i> Copyright 2012  &copy; BearEssentials</i>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
