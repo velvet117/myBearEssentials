@@ -1,4 +1,5 @@
 MyBearEssentials::Application.routes.draw do
+  root :to => 'dashboard#index'
   get "dashboard/index", :as => 'dashboard_index'
 
   get "dashboard/plan", :as => 'dashboard_plan'
@@ -24,6 +25,10 @@ MyBearEssentials::Application.routes.draw do
   resources :semesters
 
   resources :users
+  
+  match "/login" => redirect("/auth/facebook"), :as => "login"
+  match "/logout" => "session#destroy", :as => "logout"
+  match "/auth/facebook/callback" => "session#create"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
