@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @planner.user_id %>
+</p>
+
+<p>
+  <b>Semester:</b>
+  <%= @planner.semester_id %>
+</p>
+
+<p>
+  <b>Course:</b>
+  <%= @planner.course_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_planner_path(@planner) %> |
+<%= link_to 'Back', planners_path %>

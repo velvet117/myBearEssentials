@@ -1,0 +1,27 @@
+<h1>Listing specific_requirements</h1>
+
+<table>
+  <tr>
+    <th>Degree</th>
+    <th>Requirement</th>
+    <th>Units</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @specific_requirements.each do |specific_requirement| %>
+  <tr>
+    <td><%= specific_requirement.degree_id %></td>
+    <td><%= specific_requirement.requirement_id %></td>
+    <td><%= specific_requirement.units %></td>
+    <td><%= link_to 'Show', specific_requirement %></td>
+    <td><%= link_to 'Edit', edit_specific_requirement_path(specific_requirement) %></td>
+    <td><%= link_to 'Destroy', specific_requirement, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Specific requirement', new_specific_requirement_path %>

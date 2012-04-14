@@ -1,0 +1,27 @@
+<h1>Listing planners</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Semester</th>
+    <th>Course</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @planners.each do |planner| %>
+  <tr>
+    <td><%= planner.user_id %></td>
+    <td><%= planner.semester_id %></td>
+    <td><%= planner.course_id %></td>
+    <td><%= link_to 'Show', planner %></td>
+    <td><%= link_to 'Edit', edit_planner_path(planner) %></td>
+    <td><%= link_to 'Destroy', planner, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Planner', new_planner_path %>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @degree.name %>
+</p>
+
+<p>
+  <b>Units:</b>
+  <%= @degree.units %>
+</p>
+
+
+<%= link_to 'Edit', edit_degree_path(@degree) %> |
+<%= link_to 'Back', degrees_path %>

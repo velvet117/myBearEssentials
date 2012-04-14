@@ -1,4 +1,24 @@
 MyBearEssentials::Application.routes.draw do
+  resources :required_courses
+
+  resources :specific_requirements
+
+  resources :degrees
+
+  resources :requirements
+
+  resources :departments
+
+  resources :courses
+
+  resources :planners
+
+  resources :records
+
+  resources :semesters
+
+  resources :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
