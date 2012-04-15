@@ -1,2 +1,8 @@
-<h1>Dashboard#plan</h1>
-<p>Find me in app/views/dashboard/plan.html.erb</p>
+<h1>Browse Classes and Plan</h1>
+<p>
+
+  <%= label '', 'Select a course' %>
+  <%= select :title, '', @courses.collect { |c| [c.display_name, c.id] }.insert(0, '') %>
+  <%=button_tag 'Add to planner' %>
+  
+</p>
